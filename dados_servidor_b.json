@@ -1,7 +1,7 @@
 [
   {
     "title": "The Pre-He White Dwarfs in Eclipsing Binaries. I. WASP 0131+28",
-    "abstract": "  We report the first $BV$ light curves and high-resolution spectra of the\npost-mass transfer binary star WASP 0131+28 to study the absolute properties of\nextremely low-mass white dwarfs. From the observed spectra, the double-lined\nradial velocities were derived, and the effective temperature and rotational\nvelocity of the brighter, more massive primary were found to be $T_{\\rm eff,1}\n= 10,000 \\pm 200$ K and $v_1\\sin$$i$ = 55 $\\pm$ 10 km s$^{-1}$, respectively.\nThe combined analysis of the {\\it TESS} archive data and ours yielded the\naccurate fundamental parameters of the program target. The masses were derived\nto about 1.0 \\% accuracy and the radii to 0.6 \\%, or better. The secondary\ncomponent's parameters of $M_2 = 0.200 \\pm 0.002$ M$_\\odot$, $R_2 = 0.528 \\pm\n0.003$ R$_\\odot$, $T_{\\rm eff,2}$ = 11,186 $\\pm$ 235 K, and $L_2 = 3.9 \\pm 0.3$\nL$_\\odot$ are in excellent agreement with the evolutionary sequence for a\nhelium-core white dwarf of mass 0.203 M$_\\odot$, and indicates that this star\nis halfway through the constant luminosity phase of its cooling sequence.\n",
+    "abstract": "  We report the first $BV$ light curves and high-resolution spectra of the\npost-mass transfer binary star WASP 0131+28 to study the absolute properties of\nextremely low-mass white dwarfs. From the observed spectra, the double-lined\nradial velocities were derived, and the effective temperature and rotational\nvelocity of the brighter, more massive primary were found to be $T_{\\rm eff,1}\n= 10,000 \\pm 200$ K and $v_1\\sin$$i$ = 55 $\\pm$ 10 km s$^{-1}$, respectively.\nThe combined analysis of the {\\it TESS} archive data and ours yielded the\naccurate fundamental parameters of the program target. The masses were derived\nto about 1.0 \\% accuracy and the radii to 0.6 \\%, or better. The secondary\ncomponent's parameters of $M_2 = 0.200 \\pm 0.002$ M$\\odot$, $R_2 = 0.528 \\pm\n0.003$ R$\\odot$, $T_{\\rm eff,2}$ = 11,186 $\\pm$ 235 K, and $L_2 = 3.9 \\pm 0.3$\nL$\\odot$ are in excellent agreement with the evolutionary sequence for a\nhelium-core white dwarf of mass 0.203 M$\\odot$, and indicates that this star\nis halfway through the constant luminosity phase of its cooling sequence.\n",
     "label": "astro-ph"
   },
   {
@@ -15,3 +15,4 @@
     "label": "hep-ph"
   }
 ]
+
