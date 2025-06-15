@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Weak Gravity Conjecture, Black Hole Entropy, and Modular Invariance",
+    "abstract": "  In recent literature, it has been argued that a mild form of the Weak Gravity\nConjecture (WGC) is satisfied by wide classes of effective field theories in\nwhich higher-derivative corrections can be shown to shift the charge-to-mass\nratios of extremal black holes to larger values. However, this mild form does\nnot directly constrain low-energy physics because the black holes satisfying\nthe WGC have masses above the cutoff of the effective theory. In this note, we\npoint out that in string theory modular invariance can connect a light\nsuperextremal state to heavy superextremal states; the latter collapse into\nblack holes at small string coupling. In the context of heterotic string\ntheory, we show that these states are black holes that have $\\alpha'$-exact\ncharge-to-mass ratios exceeding the classical extremality bound. This suggests\nthat modular invariance of the string partition function can be used to relate\nthe existence of a light superextremal particle to the positive shift in\ncharge-to-mass ratio of extremal black holes.\n",
+    "label": "hep-th"
+  },
+  {
+    "title": "Quantum vs. classical information: operator negativity as a probe of\n  scrambling",
+    "abstract": "  We consider the logarithmic negativity and related quantities of time\nevolution operators. We study free fermion, compact boson, and holographic\nconformal field theories (CFTs) as well as numerical simulations of chaotic\nquantum spin chains. In all of these examples, the operator negativity grows\nlinearly in time, a result which we argue is a generic feature of scrambling.\nWe also consider the operator entanglement of a_reflection_ operator. For\nholographic CFTs, we find that its operator negativity is given by the area of\nthe minimal cross-section of the wormhole. We suggest that it can be used to\ndefine a notion of a 'renormalized' entropy of the eternal black hole which is\nfinite, and agrees with the classical Bekenstein-Hawking entropy at leading\norder.\n",
+    "label": "hep-th"
+  },
+  {
+    "title": "A new class of COM-Poisson regression models with applications",
+    "abstract": "  The Conway-Maxwell-Poisson (CMP) distribution is a flexible alternative to\nthe Poisson distribution for modeling count data, as it allows for both\nover-dispersion and under-dispersion. However, its use has been limited due to\nthe complexity of its normalizing constant. We propose a new class of CMP\nregression models with a new link function. We show how to fit this model via\nmaximum likelihood by simply using an offset. We develop a CMP regression based\non iterative reweighed least squares (IRLS) and then extend this model to allow\nfor additive components using a penalized splines approach. Because the CMP\ndistribution belongs to the exponential family, convergence of IRLS is\nguaranteed under some regularity conditions. Further, it is also known that\nIRLS provides smaller standard errors compared to gradient-based methods. We\nillustrate the usefulness of this approach through extensive simulation studies\nand using real data from a bike sharing system in Washington, DC.\n",
+    "label": "stat"
+  },
+  {
+    "title": "algcomparison: Comparing the Performance of Graphical Structure Learning\n  Algorithms with TETRAD",
+    "abstract": "  In this report we describe a tool for comparing the performance of graphical\ncausal structure learning algorithms implemented in the TETRAD freeware suite\nof causal analysis methods. Currently the tool is available as package in the\nTETRAD source code (written in Java). Simulations can be done varying the\nnumber of runs, sample sizes, and data modalities. Performance on this\nsimulated data can then be compared for a number of algorithms, with parameters\nvaried and with performance statistics as selected, producing a publishable\nreport. The package presented here may also be me used to compare structure\nlearning methods across platforms and programming languages, i.e., to compare\nalgorithms implemented in TETRAD with those implemented in MATLAB, Python, or\nR.\n",
+    "label": "stat"
+  }
+]
