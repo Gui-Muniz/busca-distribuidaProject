@@ -8,37 +8,50 @@ import org.json.JSONArray;
 
 public class ServerA {
     public static void main(String[] args) throws IOException {
-        System.out.println("Servidor A (versão inicial) iniciado na porta 9090...");
+        System.out.println("Servidor A (Coordenador) iniciado...");
         try (ServerSocket serverSocket = new ServerSocket(9090)) {
             while (true) {
                 try (Socket clientSocket = serverSocket.accept()) {
+                    System.out.println("Cliente conectado ao Servidor A");
                     BufferedReader clientIn = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                     PrintWriter clientOut = new PrintWriter(clientSocket.getOutputStream(), true);
+
                     String searchTerm = clientIn.readLine();
+                    System.out.println("Recebida busca por: '" + searchTerm + "'. Repassando para os servidores B e C.");
 
-                    // Contata Servidor B
-                    Socket serverBSocket = new Socket("localhost", 9091);
-                    PrintWriter serverBOut = new PrintWriter(serverBSocket.getOutputStream(), true);
-                    BufferedReader serverBIn = new BufferedReader(new InputStreamReader(serverBSocket.getInputStream()));
-                    serverBOut.println(searchTerm);
-                    String responseB = serverBIn.readLine();
-                    serverBSocket.close();
+                    String responseB = queryServer("localhost", 9091, searchTerm);
+                    String responseC = queryServer("localhost", 9092, searchTerm);
 
-                    // Contata Servidor C
-                    Socket serverCSocket = new Socket("localhost", 9092);
-                    PrintWriter serverCOut = new PrintWriter(serverCSocket.getOutputStream(), true);
-                    BufferedReader serverCIn = new BufferedReader(new InputStreamReader(serverCSocket.getInputStream()));
-                    serverCOut.println(searchTerm);
-                    String responseC = serverCIn.readLine();
-                    serverCSocket.close();
+                    JSONArray resultsB = new JSONArray(responseB);
+                    JSONArray resultsC = new JSONArray(responseC);
+                    JSONArray combinedResults = new JSONArray();
 
-                    // BUG: 'combinedResults' é reiniciado com a resposta de C, ignorando a resposta de B.
-                    JSONArray combinedResults = new JSONArray(responseB); // Carrega B
-                    combinedResults = new JSONArray(responseC);         // Sobrescreve com C
+                    for (int i = 0; i < resultsB.length(); i++) {
+                        combinedResults.put(resultsB.getJSONObject(i));
+                    }
+                    for (int i = 0; i < resultsC.length(); i++) {
+                        combinedResults.put(resultsC.getJSONObject(i));
+                    }
 
                     clientOut.println(combinedResults.toString());
+                    System.out.println("Resultados combinados enviados para o Cliente.");
+                } catch (IOException e) {
+                    System.err.println("Erro na comunicação com o cliente: " + e.getMessage());
                 }
             }
         }
     }
+
+    private static String queryServer(String host, int port, String searchTerm) {
+        try (Socket socket = new Socket(host, port)) {
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            out.println(searchTerm);
+            return in.readLine();
+        } catch (IOException e) {
+            System.err.println("Erro ao conectar ao servidor em " + host + ":" + port + " -> " + e.getMessage());
+            return "[]";
+        }
+    }
 }
+
