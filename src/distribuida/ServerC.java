@@ -6,7 +6,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -25,12 +24,10 @@ public class ServerC {
                     String searchTerm = in.readLine();
                     System.out.println("Buscando em C por: " + searchTerm);
 
-                    // Lógica correta para ler o arquivo JSON
                     String jsonContent = new String(Files.readAllBytes(Paths.get(DATA_FILE)));
                     JSONArray articles = new JSONArray(jsonContent);
                     JSONArray results = new JSONArray();
 
-                    // Itera sobre os artigos para encontrar o termo de busca
                     for (int i = 0; i < articles.length(); i++) {
                         JSONObject article = articles.getJSONObject(i);
                         String title = article.optString("title", "");
@@ -41,7 +38,6 @@ public class ServerC {
                         }
                     }
                     
-                    // Envia a lista de resultados (pode ser vazia) de volta para o Servidor A
                     out.println(results.toString());
                     System.out.println("Resultados de C enviados para o Servidor A.");
 
